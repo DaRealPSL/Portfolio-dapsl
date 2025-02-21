@@ -1,0 +1,33 @@
+{
+  "name": "DaPSL Portfolio",
+  "short_name": "DaPSL",
+  "description": "Explore Pepijn's portfolio showcasing coding projects, web development skills, and tech expertise. A modern and responsive platform built with React and TypeScript.",
+  "start_url": "/",
+  "display": "standalone",
+  "background_color": "#0d0d0d",
+  "theme_color": "#6a0dad",
+  "lang": "en",
+  "orientation": "portrait",
+  "icons": [
+    {
+      "src": "/dapsl-high-resolution-logo-no-text.png",
+      "sizes": "192x192",
+      "type": "image/png"
+    },
+    {
+      "src": "/dapsl-high-resolution-logo-no-text.png",
+      "sizes": "512x512",
+      "type": "image/png"
+    },
+    {
+      "src": "/dapsl-high-resolution-logo-no-text.png",
+      "sizes": "72x72",
+      "type": "image/png"
+    },
+    {
+      "src": "/dapsl-high-resolution-logo-no-text.png",
+      "sizes": "128x128",
+      "type": "image/png"
+    }
+  ]
+}
