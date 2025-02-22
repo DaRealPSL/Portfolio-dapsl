@@ -23,7 +23,7 @@ const Skills: React.FC = () => {
         hidden: { opacity: 0, y: 50 },
         visible: { opacity: 1, y: 0, transition: { duration: 0.8 } },
       }}
-      className="skills-section"
+      className="skills-section motion-section-main"
     >
       <h2 className="section-title">Skills</h2>
 
