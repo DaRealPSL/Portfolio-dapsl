@@ -23,7 +23,7 @@ const Projects = () => {
         hidden: { opacity: 0, y: 50 },
         visible: { opacity: 1, y: 0, transition: { duration: 1.2 } },
       }}
-      className="projects-section"
+      className="projects-section motion-section-main"
     >
       <h2 className="projects-title">My Projects</h2>
 
@@ -46,7 +46,7 @@ const Projects = () => {
         </div>
         <div className="project-item">
           <h3>Brainrot Foods</h3>
-          <p>A Fabric Minecraft mod made in 1.21.1</p>
+          <p>A Fabric Minecraft mod made for version 1.21.1</p>
           <p className="project-link">
             Check it out{" "}
             <a
