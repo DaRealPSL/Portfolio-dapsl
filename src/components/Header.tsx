@@ -5,6 +5,7 @@ const Header: React.FC = () => {
   return (
     <header className="header">
       <nav className="nav">
+        {/*}
         <a href="/" className="logo-link">
           <img
             src="/dapsl-high-resolution-logo-no-text-dark.jpg"
@@ -12,6 +13,7 @@ const Header: React.FC = () => {
             className="logo-img"
           />
         </a>
+        */}
         <a href="/" className="logo-link">
           <div className="logo">DaPSL's Portfolio</div>
         </a>
