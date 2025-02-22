@@ -79,7 +79,7 @@ const Contact: React.FC = () => {
       initial={{ opacity: 0, y: 50 }}
       animate={{ opacity: 1, y: 0 }}
       transition={{ duration: 1.5 }}
-      className="contact-section"
+      className="contact-section motion-section-main"
     >
       <h2 className="contact-title">Contact Me</h2>
       <form onSubmit={handleSubmit} className="contact-form">
