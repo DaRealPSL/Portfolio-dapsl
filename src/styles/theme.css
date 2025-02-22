@@ -21,7 +21,7 @@
 
 body {
 	margin: 0;
-	font-family: 'Poppins', sans-serif;
+	font-family: var(--font-fam-main);
 	background-color: var(--background-color);
 	color: var(--text-color);
 }
