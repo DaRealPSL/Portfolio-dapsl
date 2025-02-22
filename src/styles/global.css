@@ -29,7 +29,7 @@
   margin: 0;
   padding: 0;
   box-sizing: border-box;
-  font-family: var(--font-fam);
+  font-family: var(--font-fam-main);
 }
 
 a {
@@ -61,7 +61,7 @@ body {
 }
 
 body {
-  font-family: var(--font-fam);
+  font-family: var(--font-fam-main);
   height: 100vh;
   cursor: none;
 }
