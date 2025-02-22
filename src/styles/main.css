@@ -1,15 +1,35 @@
+/* ==========================================================================
+   📌 Main Stylesheet for the Project
+   Author: Pepijn, xxxx
+   Description: This file contains the main styles, utilities, and component styles.
+   Last Updated: [2025-02-25]
+   ========================================================================== */
+
 @charset 'UTF-8';
 @import url("https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap");
 @import url("https://fonts.googleapis.com/css2?family=Roboto:wght@400;500&display=swap");
+@import "../../node_modules/slick-carousel/slick/slick.css";
+@import "../../node_modules/slick-carousel/slick/slick-theme.css";
+
+@import "./global.css";
+@import "./theme.css";
 
 :root {
   --background-color: #0d0d0d;
   --primary-color: #6a0dad;
+  --grey-900: #111827;
+  --grey-800: #1f2937;
+  --grey-700: #374151;
+  --purple-900: #4c1d95;
+  --purple-800: #5b21b6;
+  --purple-700: #6d28d9;
+  --blue-900: #1e3a8a;
   --text-color: #ffffff;
   --secondary-text-color: #b3b3b3;
   --accent-color: #ff69b4;
   --img-bg-color: #ffffff;
   --font-fam-main: "Poppins", sans-serif;
+  --font-fam-sec: "Roboto", sans-serif;
 }
 
 header {
@@ -60,6 +80,7 @@ main {
   z-index: 2;
 }
 
+/* Logo */
 .logo {
   font-size: 24px;
   font-weight: bold;
@@ -75,6 +96,7 @@ main {
   text-decoration: none;
 }
 
+/* Nav bar */
 .nav {
   display: flex;
   align-items: center;
@@ -121,6 +143,7 @@ main {
   fill: var(--img-bg-color);
 }
 
+/* Footer */
 .footer {
   position: relative;
   text-align: center;
@@ -148,6 +171,7 @@ main {
   color: var(--primary-color);
 }
 
+/* Popup */
 .popup-container {
   position: fixed;
   bottom: -100%;
@@ -251,6 +275,13 @@ main {
   text-transform: uppercase;
 }
 
+/* Skills */
+.skills-section {
+  padding: 40px 20px;
+  background-color: var(--background-color);
+  color: var(--text-color);
+}
+
 .skills-container {
   display: flex;
   justify-content: center;
@@ -303,6 +334,7 @@ main {
   text-decoration: none;
 }
 
+/* Main text / Background */
 .hero-section {
   background-color: var(--background-color);
   color: var(--text-color);
@@ -333,6 +365,14 @@ main {
   color: var(--secondary-text-color);
 }
 
+/* Intro.tsx button container */
+.button-container {
+  display: flex;
+  gap: 12px;
+  justify-content: center;
+  margin-top: 35px; /* Spacing between buttons */
+}
+
 .explore-button {
   background-color: var(--primary-color);
   color: var(--text-color);
@@ -342,7 +382,6 @@ main {
   border: none;
   cursor: pointer;
   transition: background-color 0.3s ease;
-  
 }
 
 .explore-button:hover {
@@ -372,6 +411,7 @@ main {
   margin-top: 35px; /* Spacing between buttons */
 }
 
+/* Contact Form */
 #contact {
   position: relative;
   z-index: 1;
@@ -449,6 +489,7 @@ main {
   transform: scale(1);
 }
 
+/* Projects */
 .projects-section {
   padding: 40px 20px;
   background-color: var(--background-color);
@@ -507,6 +548,7 @@ main {
   color: var(--primary-color);
 }
 
+/* Cookies */
 .cookie-banner {
   position: fixed;
   bottom: 0;
@@ -555,6 +597,7 @@ main {
   color: var(--text-color);
 }
 
+/* Terms and conditions */
 .terms-page,
 .privacy-page {
   max-width: 900px;
@@ -607,6 +650,15 @@ main {
   display: block;
 }
 
+.motion-section-main {
+  background: linear-gradient(
+    135deg,
+    var(--background-color),
+    var(--grey-900),
+    var(--purple-900)
+  );
+}
+
 .background-container {
   position: relative;
   overflow: hidden;
@@ -657,7 +709,7 @@ body {
 /* I am not that bad of a dev... Have some faith in me 😞 */
 
 a {
-  cursor: none !important;  
+  cursor: none !important;
 }
 
 button {
@@ -672,6 +724,12 @@ input {
   cursor: none !important;
 }
 
+/* Custom Cursor */
+body,
+a,
+button,
+li,
+input,
 textarea {
   cursor: none !important;
 }
@@ -683,10 +741,10 @@ textarea {
   position: fixed;
   pointer-events: none;
   z-index: 9999;
-  transition: transform 0.6s ease-out, 
-  background-color 0.6s ease, 
-  box-shadow 0.6s ease, 
-  opacity 0.6s ease;
+  transition: transform 0.6s ease-out, background-color 0.6s ease,
+    box-shadow 0.6s ease, opacity 0.6s ease;
+  transition: transform 0.6s ease-out, background-color 0.6s ease,
+    box-shadow 0.6s ease, opacity 0.6s ease;
   box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.5);
   mix-blend-mode: difference;
   opacity: 1;
@@ -733,6 +791,7 @@ textarea {
   transition: transform 0.2s ease-out;
 }
 
+/* Text-type effect */
 .typewriter::after {
   content: "█";
   display: inline-block;
@@ -744,8 +803,43 @@ textarea {
   animation: blink 1s steps(2, start) infinite;
 }
 
+/* Keyframes */
 @keyframes blink {
   50% {
     opacity: 0;
+  }
+}
+
+@keyframes slideUp {
+  0% {
+    bottom: -100%;
+    opacity: 0;
+  }
+  100% {
+    bottom: 5%;
+    opacity: 1;
+  }
+}
+
+@keyframes slideDown {
+  0% {
+    bottom: 5%;
+    opacity: 1;
+  }
+  100% {
+    bottom: -100%;
+    opacity: 0;
+  }
+}
+
+@keyframes moveBackground {
+  0% {
+    transform: translate(-50%, -50%);
+  }
+  50% {
+    transform: translate(0, 0);
+  }
+  100% {
+    transform: translate(-50%, -50%);
   }
 }
