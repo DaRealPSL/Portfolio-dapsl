@@ -5,7 +5,7 @@ import "../styles/main.css";
 
 const Footer: React.FC = () => {
   return (
-    <footer className="footer">
+    <footer className="footer motion-section-main">
       <strong>
         &copy; {new Date().getFullYear()} DaPSL. All rights reserved.
       </strong>
