@@ -1,0 +1,290 @@
+# ----------------------
+# OS-Specific Files
+# ----------------------
+.DS_Store
+Thumbs.db
+ehthumbs.db
+desktop.ini
+$RECYCLE.BIN/
+System Volume Information/
+*.lnk
+
+# ----------------------
+# Node.js & npm/Yarn/Pnpm/Caches
+# ----------------------
+node_modules/
+.npm/
+.pnpm-store/
+.yarn/
+.yarnrc.yml
+.yarn.lock
+.pnp.cjs
+.pnp.loader.mjs
+
+# ----------------------
+# Environment Files
+# ----------------------
+.env
+.env.local
+.env.development
+.env.production
+.env.test
+.env.*.local
+
+# ----------------------
+# Build Artifacts
+# ----------------------
+dist/
+build/
+out/
+.temp/
+.cache/
+.next/
+.vercel/
+.vercel_cache/
+
+# ----------------------
+# Logs & Debugging Files
+# ----------------------
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+pnpm-debug.log*
+lerna-debug.log*
+stacktrace.log
+*.log
+*.gz
+*.zip
+*.tar
+
+# ----------------------
+# IDEs and Editors
+# ----------------------
+.idea/
+.vscode/
+*.code-workspace
+*.sublime-*
+*.swp
+*.swo
+*.bak
+*.tmp
+*.~undo-tree~
+*.session
+
+# ----------------------
+# TypeScript & Compilation
+# ----------------------
+*.tsbuildinfo
+*.tscache/
+*.d.ts.map
+*.d.ts
+*.js.map
+*.mjs.map
+*.cjs.map
+
+# ----------------------
+# Testing & Coverage
+# ----------------------
+coverage/
+.nyc_output/
+jest/
+cypress/videos/
+cypress/screenshots/
+*.lcov
+*.gcov
+
+# ----------------------
+# Git & Version Control
+# ----------------------
+.git/
+.gitignore
+.gitattributes
+.gitmodules
+*.orig
+*.rej
+*.patch
+
+# ----------------------
+# Temporary Files & Caches
+# ----------------------
+*.lock
+*.pid
+*.seed
+*.pid.lock
+*.log
+*.log.*
+*.gz
+*.bak
+*.swp
+*.swo
+*.tmp
+*.temp
+*.old
+*.rej
+
+# ----------------------
+# Monorepos (e.g., Turbo, Lerna, Nx)
+# ----------------------
+.turbo/
+.turbo-cache/
+lerna-debug.log
+.nx/
+
+# ----------------------
+# Docker
+# ----------------------
+.dockerignore
+Dockerfile*
+docker-compose.yml
+docker-compose.override.yml
+*.dockerfile
+
+# ----------------------
+# Databases
+# ----------------------
+*.sqlite
+*.sqlite3
+*.db
+*.mdb
+*.sql
+*.pdb
+*.ldb
+*.log
+*.ldb-wal
+*.sqlite-wal
+*.sqlite-shm
+*.sqlite-journal
+
+# ----------------------
+# Images & Binary Files
+# ----------------------
+*.tiff
+*.tif
+*.bmp
+*.ico
+*.icns
+*.psd
+*.ai
+*.sketch
+
+# ----------------------
+# Vercel & Deployment
+# ----------------------
+.vercel/
+.vercel_cache/
+now.json
+now.sh
+
+# ----------------------
+# Next.js / Nuxt.js / SvelteKit
+# ----------------------
+.next/
+.nuxt/
+.svelte-kit/
+.vercel/
+.netlify/
+
+# ----------------------
+# Miscellaneous
+# ----------------------
+*.apk
+*.aab
+*.ipa
+*.app
+*.exe
+*.dmg
+*.iso
+*.dll
+*.so
+*.o
+*.a
+*.lib
+*.dylib
+*.deb
+*.rpm
+*.msi
+*.appimage
+*.snap
+*.whl
+*.egg-info/
+
+# ----------------------
+# VS Code Extensions
+# ----------------------
+*.history/
+.history/
+.lldb/
+.vscode-test/
+.vscode-insiders/
+
+# ----------------------
+# Python Virtual Environments
+# ----------------------
+venv/
+.venv/
+pip-log.txt
+pip-delete-this-directory.txt
+
+# ----------------------
+# Java & Kotlin
+# ----------------------
+*.class
+*.war
+*.ear
+*.jar
+*.iml
+*.ipr
+*.iws
+.gradle/
+build/
+
+# ----------------------
+# Rust / Cargo
+# ----------------------
+target/
+Cargo.lock
+.cargo/
+.rustup/
+
+# ----------------------
+# Go / Golang
+# ----------------------
+bin/
+pkg/
+*.exe
+*.test
+go.sum
+
+# ----------------------
+# Lua
+# ----------------------
+*.luac
+
+# ----------------------
+# Unreal Engine
+# ----------------------
+*.uproject
+*.umap
+*.uasset
+
+# ----------------------
+# Godot Engine
+# ----------------------
+.import/
+.export/
+
+# ----------------------
+# Other Frameworks & Misc Tools
+# ----------------------
+*.lock-wscript
+*.log
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+pnpm-debug.log*
+lerna-debug.log*
+stacktrace.log
+.trash/
+*~
+*.sw?
+**/__pycache__/
