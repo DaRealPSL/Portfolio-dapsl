@@ -88,8 +88,10 @@ main {
 
 .nav-links-container {
   display: flex;
+  align-items: center;
   justify-content: space-between;
   width: 100%;
+  flex-grow: 1;
 }
 
 .nav-links-left {
@@ -821,11 +823,40 @@ textarea {
 }
 
 /* Mobile specific styling */
+
+/* Media Query for Small Screens (Portrait Mode) */
+@media (max-width: 494px) {
+  header {
+    height: 60px;
+    padding: 0.6rem 1rem;
+  }
+
+  .nav-links-left {
+    display: flex;
+    gap: 6px;
+    font-size: 14px;
+  }
+
+  /* Ensure the GitHub icon remains visible */
+  .nav-links-right {
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+    flex-shrink: 0;
+    padding-left: 6px;
+  }
+
+  .nav-link-logo {
+    width: 28px;
+    height: 28px;
+  }
+}
+
+/* Extra Adjustments for Very Small Screens (Narrow Phones) */
 @media (max-width: 390px) {
   header {
-    height: 55px;
+    height: 50px;
     padding: 0.4rem 0.8rem;
-    box-shadow: 0 1px 2px rgba(0, 0, 0, 0.1);
   }
 
   header h1 {
@@ -835,6 +866,12 @@ textarea {
   header nav a {
     margin: 0 0.3rem;
     font-size: 0.85rem;
+  }
+
+  /* Reduce icon size for tiny screens */
+  .nav-link-logo {
+    width: 24px;
+    height: 24px;
   }
 
   .nav {
@@ -864,17 +901,12 @@ textarea {
     height: 45px;
   }
 
-  .nav-link-logo {
-    width: 28px;
-    height: 28px;
-  }
-
   .nav-link-right {
     color: #d42ef6;
     text-decoration: none;
     transition: color 0.3s ease;
   }
-  
+
   .nav-link-right:hover {
     color: var(--primary-color);
   }
@@ -940,7 +972,7 @@ textarea {
     text-decoration: none;
     transition: color 0.3s ease;
   }
-  
+
   .nav-link-right:hover {
     color: var(--primary-color);
   }
@@ -1002,7 +1034,7 @@ textarea {
     z-index: 2;
   }
 
-  /* Logo */
+  /* Logo *
   .logo {
     font-size: 24px;
     font-weight: bold;
