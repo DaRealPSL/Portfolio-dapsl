@@ -99,7 +99,7 @@ main {
   gap: 16px;
   font-family: var(--font-fam-main);
   margin: 12px;
-  font-size: 19px;
+  font-size: 16px;
   font-weight: bold;
 }
 
@@ -828,7 +828,7 @@ textarea {
 @media (max-width: 494px) {
   header {
     height: 60px;
-    padding: 0.6rem 1rem;
+    padding: 10px 16px;
   }
 
   .nav-links-left {
@@ -837,7 +837,6 @@ textarea {
     font-size: 14px;
   }
 
-  /* Ensure the GitHub icon remains visible */
   .nav-links-right {
     display: flex;
     align-items: center;
@@ -856,19 +855,18 @@ textarea {
 @media (max-width: 390px) {
   header {
     height: 50px;
-    padding: 0.4rem 0.8rem;
+    padding: 8px 12px;
   }
 
   header h1 {
-    font-size: 1.1rem;
+    font-size: 20px;
   }
 
   header nav a {
-    margin: 0 0.3rem;
-    font-size: 0.85rem;
+    margin: 0 4px;
+    font-size: 14px;
   }
 
-  /* Reduce icon size for tiny screens */
   .nav-link-logo {
     width: 24px;
     height: 24px;
@@ -887,7 +885,7 @@ textarea {
     display: flex;
     align-items: center;
     justify-content: flex-end;
-    gap: clamp(4px, 3vw, 12px);
+    gap: 4px;
     flex-wrap: wrap;
     margin-left: auto;
   }
@@ -912,7 +910,7 @@ textarea {
   }
 
   .nav-link-right img {
-    width: clamp(24px, 5vw, 32px);
+    width: 24px;
     height: auto;
     object-fit: contain;
   }
@@ -922,17 +920,17 @@ textarea {
 @media (min-width: 391px) and (max-width: 768px) {
   header {
     height: 60px;
-    padding: 0.5rem 1rem;
+    padding: 8px 16px;
     box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
   }
 
   header h1 {
-    font-size: 1.25rem;
+    font-size: 22px;
   }
 
   header nav a {
-    margin: 0 0.4rem;
-    font-size: 0.9rem;
+    margin: 0 6px;
+    font-size: 14px;
   }
 
   .nav {
@@ -940,7 +938,7 @@ textarea {
   }
 
   .nav-links-left {
-    font-size: 16px;
+    font-size: 14px;
     margin: 0;
   }
 
@@ -948,7 +946,7 @@ textarea {
     display: flex;
     align-items: center;
     justify-content: flex-end;
-    gap: clamp(6px, 3vw, 16px);
+    gap: 8px;
     flex-wrap: wrap;
     margin-left: auto;
   }
@@ -978,132 +976,8 @@ textarea {
   }
 
   .nav-link-right img {
-    width: clamp(28px, 6vw, 38px);
+    width: 28px;
     height: auto;
     object-fit: contain;
-  }
-}
-
-/* Styles for large devices (e.g., desktops) */
-@media (min-width: 769px) {
-  header {
-    position: sticky;
-    top: 0;
-    z-index: 1000;
-    width: 100%;
-    height: 70px;
-    padding: 1rem 2rem;
-    background: var(--background-color);
-    color: var(--text-color);
-    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-  }
-
-  header h1 {
-    font-size: 1.5rem;
-  }
-
-  header nav a {
-    margin: 0 1rem;
-    color: #d42ef6;
-    text-decoration: none;
-  }
-
-  .header {
-    position: fixed;
-    top: 0;
-    left: 0;
-    width: 100%;
-    background-color: var(--background-color);
-    color: #d42ef6;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-    z-index: 1001;
-  }
-
-  main {
-    position: relative;
-  }
-
-  .main {
-    z-index: 0;
-  }
-
-  .intro-text {
-    z-index: 2;
-  }
-
-  /* Logo *
-  .logo {
-    font-size: 24px;
-    font-weight: bold;
-  }
-
-  .logo-img {
-    width: 75px;
-    height: 75px;
-    background-color: var(--background-color);
-  }
-
-  .logo-link {
-    text-decoration: none;
-  }
-
-  /* Nav bar */
-  .nav {
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    padding: 12px;
-    width: 100%;
-  }
-
-  .nav-links-container {
-    display: flex;
-    justify-content: space-between;
-    width: 100%;
-  }
-
-  .nav-links-left {
-    display: flex;
-    gap: 16px;
-    font-family: var(--font-fam-main);
-    margin: 12px;
-    font-size: 19px;
-    font-weight: bold;
-  }
-
-  .nav-links-right {
-    display: flex;
-    align-items: center;
-    justify-content: flex-end;
-    gap: clamp(10px, 2vw, 20px);
-    flex-wrap: wrap;
-    margin-left: auto;
-  }
-
-  .nav-link-left,
-  .nav-link-right {
-    color: #d42ef6;
-    text-decoration: none;
-    transition: color 0.3s ease;
-  }
-
-  .nav-link-left:hover,
-  .nav-link-right:hover {
-    color: var(--primary-color);
-  }
-
-  .nav-link-right img {
-    width: clamp(30px, 8vw, 50px);
-    height: auto;
-    object-fit: contain;
-  }
-
-  .nav-link-logo {
-    width: 40px;
-    height: 40px;
-    fill: var(--img-bg-color);
   }
 }
