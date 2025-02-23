@@ -105,6 +105,7 @@ main {
   display: flex;
   align-items: center;
   margin-left: auto;
+  min-width: 40px;
 }
 
 .nav-link-left,
@@ -123,6 +124,8 @@ main {
   width: 40px;
   height: 40px;
   fill: var(--img-bg-color);
+  min-width: 28px;
+  min-height: 28px;
 }
 
 /* Footer */
@@ -818,7 +821,6 @@ textarea {
 }
 
 /* Mobile specific styling */
-/* Styles for small devices (e.g., mobile phones) */
 @media (max-width: 390px) {
   header {
     height: 55px;
@@ -845,7 +847,12 @@ textarea {
   }
 
   .nav-links-right {
-    margin-left: 0;
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+    gap: clamp(4px, 3vw, 12px);
+    flex-wrap: wrap;
+    margin-left: auto;
   }
 
   .logo {
@@ -860,6 +867,22 @@ textarea {
   .nav-link-logo {
     width: 28px;
     height: 28px;
+  }
+
+  .nav-link-right {
+    color: #d42ef6;
+    text-decoration: none;
+    transition: color 0.3s ease;
+  }
+  
+  .nav-link-right:hover {
+    color: var(--primary-color);
+  }
+
+  .nav-link-right img {
+    width: clamp(24px, 5vw, 32px);
+    height: auto;
+    object-fit: contain;
   }
 }
 
@@ -890,7 +913,12 @@ textarea {
   }
 
   .nav-links-right {
-    margin-left: 0;
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+    gap: clamp(6px, 3vw, 16px);
+    flex-wrap: wrap;
+    margin-left: auto;
   }
 
   .logo {
@@ -905,6 +933,22 @@ textarea {
   .nav-link-logo {
     width: 30px;
     height: 30px;
+  }
+
+  .nav-link-right {
+    color: #d42ef6;
+    text-decoration: none;
+    transition: color 0.3s ease;
+  }
+  
+  .nav-link-right:hover {
+    color: var(--primary-color);
+  }
+
+  .nav-link-right img {
+    width: clamp(28px, 6vw, 38px);
+    height: auto;
+    object-fit: contain;
   }
 }
 
@@ -980,7 +1024,6 @@ textarea {
     align-items: center;
     justify-content: space-between;
     padding: 12px;
-    /* margin: 15px; */
     width: 100%;
   }
 
@@ -1002,6 +1045,9 @@ textarea {
   .nav-links-right {
     display: flex;
     align-items: center;
+    justify-content: flex-end;
+    gap: clamp(10px, 2vw, 20px);
+    flex-wrap: wrap;
     margin-left: auto;
   }
 
@@ -1015,6 +1061,12 @@ textarea {
   .nav-link-left:hover,
   .nav-link-right:hover {
     color: var(--primary-color);
+  }
+
+  .nav-link-right img {
+    width: clamp(30px, 8vw, 50px);
+    height: auto;
+    object-fit: contain;
   }
 
   .nav-link-logo {
