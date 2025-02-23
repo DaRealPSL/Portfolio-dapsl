@@ -10,11 +10,14 @@ const Footer: React.FC = () => {
         &copy; {new Date().getFullYear()} DaPSL. All rights reserved.
       </strong>
       <div className="footer-links">
-        <Link to="/terms" className="footer-link">
+        <Link to="/terms" className="footer-link terms-link">
           Terms of Service
         </Link>
-        <Link to="/privacy" className="footer-link">
+        <Link to="/privacy" className="footer-link privacy-link">
           Privacy Policy
+        </Link>
+        <Link to="https://github.com/IAmThePSL/Portfolio-dapsl/" className="footer-link source-code-link">
+          View Source code 
         </Link>
       </div>
     </footer>
