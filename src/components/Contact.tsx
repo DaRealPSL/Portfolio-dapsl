@@ -1,9 +1,14 @@
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 import { motion, useAnimation } from "framer-motion";
 import { useInView } from "react-intersection-observer";
 import emailjs from "emailjs-com";
 import validator from "validator";
+
 import "../styles/main.css";
+
+const containsOffensiveTerms = (input: string, offensiveList: string[]) => {
+  return offensiveList.some((term) => input.toLowerCase().includes(term));
+};
 
 const Contact: React.FC = () => {
   const [formData, setFormData] = useState({
@@ -16,6 +21,28 @@ const Contact: React.FC = () => {
     message: string;
     success: boolean;
   } | null>(null);
+  const [offensiveTerms, setOffensiveTerms] = useState<string[]>([]);
+
+  useEffect(() => {
+    const loadOffensiveTerms = async () => {
+      const response = await fetch("/src/utils/offensive.txt");
+      const text = await response.text();
+      const terms = text
+        .split("\n")
+        .map((term) => term.trim().toLowerCase())
+        .filter((term) => term.length > 0); //ignore empty lines
+
+      setOffensiveTerms(terms);
+
+      if (response.ok) {
+        console.log("Fetched correctly!");
+      } else {
+        console.error("Not fetched correctly");
+      }
+    };
+
+    loadOffensiveTerms();
+  }, []);
 
   const handleChange = (
     e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>
@@ -27,7 +54,32 @@ const Contact: React.FC = () => {
     e.preventDefault();
 
     if (formData.honeypot !== "") {
-      setStatus({ message: "Bot detected! Submission blocked.", success: false });
+      setStatus({
+        message: "Bot detected! Submission blocked.",
+        success: false,
+      });
+      return;
+    }
+
+    if (offensiveTerms.length === 0) {
+      setStatus({
+        message: "Error: Offensive words not loaded yet.",
+        success: false
+      });
+    }
+
+    //Load terms from list
+    const offensiveList = offensiveTerms.map((term) => term.trim());
+
+    //Check for offensive words in name and full email
+    if (
+      containsOffensiveTerms(formData.name, offensiveList) ||
+      containsOffensiveTerms(formData.email.toLowerCase(), offensiveList)
+    ) {
+      setStatus({
+        message: "Offensive language detected! Submission blocked.",
+        success: false,
+      });
       return;
     }
 
@@ -35,10 +87,17 @@ const Contact: React.FC = () => {
       setStatus({ message: "Invalid email address", success: false });
       return;
     }
-    if (formData.name.trim() === "") {
+    if (
+      formData.name.trim() === "" ||
+      formData.email.trim() === "" ||
+      formData.message.trim() === ""
+    ) {
       setStatus({ message: "All fields are required", success: false });
       return;
     }
+
+    //setStatus to indicate waiting for the server
+    setStatus({ message: "Waiting for server response...", success: false });
 
     emailjs
       .send(
@@ -84,20 +143,28 @@ const Contact: React.FC = () => {
       <h2 className="contact-title">Contact Me</h2>
       <form onSubmit={handleSubmit} className="contact-form">
         {status && (
-          <div className={`status-message ${status.success ? 'success' : 'error'}`}>
+          <div
+            className={`status-message ${
+              status.message === "Waiting for server response..."
+                ? "loading"
+                : status.success
+                ? "success"
+                : "error"
+            }`}
+          >
             {status.message}
           </div>
         )}
-        <input 
-          type="text" 
-          name="honeypot" 
-          id="honeypot" 
+        <input
+          type="text"
+          name="honeypot"
+          id="honeypot"
           style={{
-            position: "absolute", 
-            left: "-9999px", 
-            opacity: 0, 
-            pointerEvents: "none"
-          }} 
+            position: "absolute",
+            left: "-9999px",
+            opacity: 0,
+            pointerEvents: "none",
+          }}
           autoComplete="off"
           onChange={handleChange}
           value={formData.honeypot}
