@@ -1,4 +1,7 @@
 import React from "react";
+
+import ResumeDownload from "./ResumeDownload";
+
 import "../styles/main.css";
 
 const Header: React.FC = () => {
@@ -35,6 +38,7 @@ const Header: React.FC = () => {
           </div>
 
           <div className="nav-links-right">
+            <ResumeDownload />
             <a href="https://github.com/IAmThePSL" className="nav-link-right" target="_blank">
               <img
                 src="/github-128.svg"
