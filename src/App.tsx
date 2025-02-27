@@ -5,6 +5,7 @@ import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 // Pages
 import Terms from "./pages/Terms";
 import Privacy from "./pages/Privacy";
+import Faq from './pages/Faq'
 
 // Components
 import Header from "./components/Header";
@@ -12,6 +13,7 @@ import Footer from "./components/Footer";
 import Intro from "./components/Intro";
 import Skills from "./components/Skills";
 import Projects from "./components/Projects";
+import WWYNM from "./components/WWYNM";
 import Contact from "./components/Contact";
 import CookieBanner from "./components/CookieBanner";
 import CustomCursor from "./components/CustomCursor";
@@ -48,7 +50,7 @@ const App: React.FC = () => {
   return (
     <Router>
       <CustomCursor />
-      <div>
+      <div className="main-body">
         <Header />
         <main>
           <Routes>
@@ -57,11 +59,13 @@ const App: React.FC = () => {
                 <Intro />
                 <Skills />
                 <Projects />
+                <WWYNM />
                 <Contact />
               </>
             } />
             <Route path="/terms" element={<Terms />} />
             <Route path="/privacy" element={<Privacy />} />
+            <Route path="/faq" element={<Faq />} />
           </Routes>
         </main>
         <CookieBanner />
