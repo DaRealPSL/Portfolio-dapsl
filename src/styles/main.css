@@ -5,7 +5,7 @@
    📌 Main Stylesheet for the Project
    Author: Pepijn
    Description: This file contains the primary styles, utilities, and component styles.
-   Last Updated: 2025-02-22
+   Last Updated: 2025-02-27
    ========================================================================== */
 
 body {
@@ -378,12 +378,13 @@ main {
   background-color: #6a0dad;
   color: var(--text-color);
   font-weight: 600;
-  padding: 12px 24px;
-  border-radius: 8px;
+  padding: 8px 16px;
+  border-radius: 6px;
   border: none;
   cursor: pointer;
   transition: background-color 0.3s ease;
-  gap: 12px;
+  gap: 8px;
+  font-size: 14px;
 }
 
 .resume-download-btn:hover {
@@ -602,9 +603,10 @@ main {
   color: var(--text-color);
 }
 
-/* Terms and conditions */
+/* Terms, Privacy and FAQ */
 .terms-page,
-.privacy-page {
+.privacy-page,
+.faq-page {
   max-width: 900px;
   margin: 50px auto;
   padding: 20px;
@@ -617,7 +619,8 @@ main {
 }
 
 .terms-title,
-.privacy-title {
+.privacy-title
+.faq-title {
   font-size: 2.5rem;
   color: var(--primary-color);
   text-align: center;
@@ -626,7 +629,8 @@ main {
 }
 
 .terms-heading,
-.privacy-heading {
+.privacy-heading,
+.faq-heading {
   font-size: 2rem;
   color: var(--accent-color);
   margin-top: 20px;
@@ -635,19 +639,22 @@ main {
 }
 
 .terms-text,
-.privacy-text {
+.privacy-text,
+.faq-text {
   color: var(--secondary-text-color);
   margin-bottom: 15px;
 }
 
 .terms-link,
-.privacy-link {
+.privacy-link,
+.faq-link {
   color: var(--accent-color);
   text-decoration: none;
 }
 
 .terms-link:hover,
-.privacy-link:hover {
+.privacy-link:hover
+.faq-link:hover {
   text-decoration: underline;
 }
 
