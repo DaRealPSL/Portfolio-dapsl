@@ -158,7 +158,10 @@ main {
   color: var(--primary-color);
 }
 
-.terms-link {
+.terms-link,
+.privacy-link,
+.source-code-link,
+.faq-link {
   background: none;
   border: none;
   color: var(--accent-color);
@@ -169,38 +172,8 @@ main {
   transition: color 0.2s ease-in-out;
 }
 
-.terms-link:hover {
-  color: var(--primary-color);
-  text-decoration: underline;
-}
-
-.privacy-link {
-  background: none;
-  border: none;
-  color: var(--accent-color);
-  cursor: pointer;
-  font-size: 1rem;
-  margin: 0 0.5rem;
-  text-decoration: none;
-  transition: color 0.2s ease-in-out;
-}
-
-.privacy-link:hover {
-  color: var(--primary-color);
-  text-decoration: underline;
-}
-
-.source-code-link {
-  background: none;
-  border: none;
-  color: var(--accent-color);
-  cursor: pointer;
-  font-size: 1rem;
-  margin: 0 0.5rem;
-  text-decoration: none;
-  transition: color 0.2s ease-in-out;
-}
-
+.terms-link:hover,
+.privacy-link:hover,
 .source-code-link:hover {
   color: var(--primary-color);
   text-decoration: underline;
