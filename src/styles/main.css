@@ -82,7 +82,7 @@ main {
   align-items: center;
   justify-content: space-between;
   padding: 12px;
-  /* margin: 15px; */
+  margin: 15px;
   width: 100%;
 }
 
@@ -502,6 +502,25 @@ main {
   transform: scale(1);
 }
 
+.status-message.loading {
+  color: #ff1100;
+  font-weight: bold;
+}
+
+.status-message.success {
+  color: #089208;
+  font-weight: bold;
+}
+
+.status-message.error {
+  color: #ca0808;
+  font-weight: bold;
+}
+
+#honeypot {
+  display: none !important;
+}
+
 /* Projects */
 .projects-section {
   padding: 40px 20px;
@@ -823,7 +842,6 @@ textarea {
 }
 
 /* Mobile specific styling */
-
 /* Media Query for Small Screens (Portrait Mode) */
 @media (max-width: 494px) {
   header {
