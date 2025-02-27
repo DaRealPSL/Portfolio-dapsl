@@ -16,6 +16,9 @@ const Footer: React.FC = () => {
         <Link to="/privacy" className="footer-link privacy-link">
           Privacy Policy
         </Link>
+        <Link to="/faq" className="footer-link faq-link">
+          FAQ
+        </Link>
         <Link to="https://github.com/IAmThePSL/Portfolio-dapsl/" className="footer-link source-code-link">
           View Source code 
         </Link>
