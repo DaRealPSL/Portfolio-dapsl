@@ -26,16 +26,20 @@ const Intro: React.FC = () => {
         <h1 className="hero-title text-4xl font-bold text-white">
           <Typewriter
             words={[
-              "Let's Build Something Together!",
-              "Creating, Innovating, Developing.",
-              "Coding the Future.",
+              "Let's Build Something Amazing Together!",
+              "Creating, Innovating, and Pushing Boundaries.",
+              "Coding the Future, One Line at a Time.",
+              "Designing with Purpose, Developing with Passion.",
+              "Turning Ideas into Reality.",
+              "Engineering the Web, Crafting Experiences.",
+              "Breaking Limits, Building Possibilities.",
             ]}
             loop={true}
             cursor
             cursorStyle="▌"
-            typeSpeed={75}
+            typeSpeed={65}
             deleteSpeed={50}
-            delaySpeed={1500}
+            delaySpeed={1750}
           />
         </h1>
         <p className="hero-description text-lg text-gray-300 mt-4">
