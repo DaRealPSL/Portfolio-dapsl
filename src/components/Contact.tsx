@@ -31,7 +31,7 @@ const Contact: React.FC = () => {
 
   useEffect(() => {
     const loadOffensiveTerms = async () => {
-      const response = await fetch("/src/utils/offensive.txt");
+      const response = await fetch("/utils/offensive.txt");
       const text = await response.text();
       const terms = text
         .split("\n")
