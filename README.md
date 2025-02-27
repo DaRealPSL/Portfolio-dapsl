@@ -11,7 +11,7 @@ Welcome to my personal portfolio! 🚀 This site showcases my projects, skills, 
 ## 🛠️ Tech Stack
 - **Frontend:** HTML, CSS, TypeScript, Vite, React
 - **Styling:** Tailwind CSS, CSS
-- **Deployment:** NaN
+- **Deployment:** Vercel
 
 ## 🚀 Setup & Run Locally
 
