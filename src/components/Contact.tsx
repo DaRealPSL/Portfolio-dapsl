@@ -1,3 +1,9 @@
+// TODO: Update Contact.tsx to make sure vercel can find the "offensive.txt" file
+//       and actually read / execute the code based around that file.
+//       such as:
+//       flagging names & email
+//       
+//       To do this, we should only change the path at line 34 at the "fetch()".
 import React, { useState, useEffect } from "react";
 import { motion, useAnimation } from "framer-motion";
 import { useInView } from "react-intersection-observer";
@@ -35,9 +41,9 @@ const Contact: React.FC = () => {
       setOffensiveTerms(terms);
 
       if (response.ok) {
-        console.log("Fetched correctly!");
+        console.log("Fetched offensive.txt correctly");
       } else {
-        console.error("Not fetched correctly");
+        console.error("Did not fetch offensive.txt correctly");
       }
     };
 
