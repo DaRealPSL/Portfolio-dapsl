@@ -22,12 +22,14 @@ Welcome to my personal portfolio! 🚀 This site showcases my projects, skills, 
    ```
 
 2. Install dependencies:
-
+   ```sh
     npm install
+   ```
 
 3. Start the development server:
-
+   ```sh
     npm run dev
+   ```
 
 # 📜 License
 
