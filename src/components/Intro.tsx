@@ -3,7 +3,6 @@ import { motion } from "framer-motion";
 import { Typewriter } from "react-simple-typewriter";
 import "../styles/main.css";
 import "./ResumeDownload";
-import ResumeDownload from "./ResumeDownload";
 
 const Intro: React.FC = () => {
   const handleExploreClick = () => {
@@ -12,6 +11,12 @@ const Intro: React.FC = () => {
       projectsSection.scrollIntoView({ behavior: "smooth" });
     }
   };
+  const handleWwynmClick = () => {
+		const wwynmSection = document.getElementById("wwynm");
+		if (wwynmSection) {
+			wwynmSection.scrollIntoView({ behavior: "smooth" });
+		}
+	};
 
   return (
     <motion.section
@@ -62,8 +67,19 @@ const Intro: React.FC = () => {
           >
             Explore My Work
           </motion.button>
+          <motion.button
+				className="wwynm-btn"
+				style={{ backgroundColor: "#6a0dad", border: "none" }}
+				whileHover={{
+					scale: 1.1,
+					backgroundColor: "#8832cc",
+				}}
+				whileTap={{ scale: 0.95 }}
+				transition={{ duration: 0.2 }}
+				onClick={handleWwynmClick}
+			>
 
-          <ResumeDownload />
+			</motion.button>
         </div>
       </div>
     </motion.section>
