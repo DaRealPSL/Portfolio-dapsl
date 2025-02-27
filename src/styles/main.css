@@ -554,6 +554,65 @@ main {
   color: var(--primary-color);
 }
 
+/* WWYNM Section Styles */
+.wwynm-section {
+  padding: 40px 20px;
+  background-color: var(--background-color);
+  color: var(--text-color);
+}
+
+.wwynm-title {
+  font-size: 28px;
+  font-weight: bold;
+  text-align: center;
+  margin-bottom: 30px;
+  color: var(--primary-color);
+  text-transform: uppercase;
+}
+
+.wwynm-list {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px;
+  justify-content: center;
+}
+
+.wwynm-item {
+  flex: 1 1 250px;
+  min-width: 250px;
+  background-color: #1a1a1a;
+  border-radius: 8px;
+  padding: 20px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  transition: transform 0.3s ease;
+}
+
+.wwynm-item:hover {
+  transform: scale(1.05);
+}
+
+.wwynm-item h3 {
+  font-size: 20px;
+  margin-bottom: 10px;
+  color: var(--primary-color);
+}
+
+.wwynm-item p {
+  font-size: 16px;
+  color: var(--secondary-text-color);
+  margin-bottom: 10px;
+}
+
+.wwynm-item a {
+  color: var(--accent-color);
+  text-decoration: underline;
+  transition: color 0.3s ease;
+}
+
+.wwynm-item a:hover {
+  color: var(--primary-color);
+}
+
 /* Cookies */
 .cookie-banner {
   position: fixed;
@@ -619,8 +678,7 @@ main {
 }
 
 .terms-title,
-.privacy-title
-.faq-title {
+.privacy-title .faq-title {
   font-size: 2.5rem;
   color: var(--primary-color);
   text-align: center;
@@ -653,8 +711,7 @@ main {
 }
 
 .terms-link:hover,
-.privacy-link:hover
-.faq-link:hover {
+.privacy-link:hover .faq-link:hover {
   text-decoration: underline;
 }
 
