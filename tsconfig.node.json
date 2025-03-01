@@ -7,11 +7,12 @@
     "skipLibCheck": true,
 
     /* Bundler mode */
-    "moduleResolution": "bundler",
+    "moduleResolution": "node", /*Was "bundler" first*/
     "allowImportingTsExtensions": true,
     "isolatedModules": true,
     "moduleDetection": "force",
-    "noEmit": true,
+    "noEmit": false,
+    "outDir": "./dist",
 
     /* Linting */
     "strict": true,
