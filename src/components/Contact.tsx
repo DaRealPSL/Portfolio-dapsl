@@ -1,7 +1,6 @@
 import React, { useState, useEffect } from "react";
 import { motion, useAnimation } from "framer-motion";
 import { useInView } from "react-intersection-observer";
-import emailjs from "emailjs-com";
 import validator from "validator";
 
 import "../styles/main.css";
@@ -30,7 +29,7 @@ const Contact: React.FC = () => {
       const terms = text
         .split("\n")
         .map((term) => term.trim().toLowerCase())
-        .filter((term) => term.length > 0); //ignore empty lines
+        .filter((term) => term.length > 0);
 
       setOffensiveTerms(terms);
 
@@ -50,7 +49,7 @@ const Contact: React.FC = () => {
     setFormData({ ...formData, [e.target.name]: e.target.value });
   };
 
-  const handleSubmit = (e: React.FormEvent<HTMLFormElement>) => {
+  const handleSubmit = async (e: React.FormEvent<HTMLFormElement>) => {
     e.preventDefault();
 
     if (formData.honeypot !== "") {
@@ -64,14 +63,15 @@ const Contact: React.FC = () => {
     if (offensiveTerms.length === 0) {
       setStatus({
         message: "Error: Offensive words not loaded yet.",
-        success: false
+        success: false,
       });
+      return;
     }
 
-    //Load terms from list
+    // Load terms from list
     const offensiveList = offensiveTerms.map((term) => term.trim());
 
-    //Check for offensive words in name and full email
+    // Check for offensive words in name and email
     if (
       containsOffensiveTerms(formData.name, offensiveList) ||
       containsOffensiveTerms(formData.email.toLowerCase(), offensiveList)
@@ -87,6 +87,7 @@ const Contact: React.FC = () => {
       setStatus({ message: "Invalid email address", success: false });
       return;
     }
+
     if (
       formData.name.trim() === "" ||
       formData.email.trim() === "" ||
@@ -96,30 +97,31 @@ const Contact: React.FC = () => {
       return;
     }
 
-    //setStatus to indicate waiting for the server
+    // Indicate waiting for the server
     setStatus({ message: "Waiting for server response...", success: false });
 
-    emailjs
-      .send(
-        import.meta.env.VITE_EMAILJS_SERVICE_ID,
-        import.meta.env.VITE_EMAILJS_TEMPLATE_ID,
-        formData,
-        import.meta.env.VITE_EMAILJS_USER_ID
-      )
-      .then((response) => {
-        console.log("Email sent successfully", response);
-        setStatus({
-          message: "Email sent successfully",
-          success: true,
-        });
-      })
-      .catch((error) => {
-        console.error("Error sending email", error);
-        setStatus({
-          message: "Something went wrong! Cannot submit form.",
-          success: false,
-        });
+    try {
+      const res = await fetch("/api/send-email", {
+        method: "POST",
+        headers: { "Content-Type": "application/json" },
+        body: JSON.stringify({
+          name: formData.name,
+          email: formData.email,
+          message: formData.message,
+        }),
       });
+
+      const data = await res.json();
+      if (data.success) {
+        setStatus({ message: "Email sent successfully!", success: true });
+        setFormData({ name: "", email: "", message: "", honeypot: "" });
+      } else {
+        setStatus({ message: "Failed to send email.", success: false });
+      }
+    } catch (error) {
+      console.error("Error sending email", error);
+      setStatus({ message: "Something went wrong! Cannot submit form.", success: false });
+    }
   };
 
   const controls = useAnimation();
