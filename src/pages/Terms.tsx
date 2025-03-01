@@ -11,7 +11,7 @@ const Terms: React.FC = () => {
 
       <h2 className="terms-heading">Use of Content</h2>
       <p className="terms-text">
-        All content on this website, including text, images, and code, is owned by me unless stated otherwise. You may not copy, modify, or redistribute content without permission.
+        All content on this website, including text, images, and code, is provided under the MIT License. You are free to use, modify, and distribute the content, provided that the original copyright notice is included in all copies or substantial portions of the content.
       </p>
 
       <h2 className="terms-heading">External Links</h2>
