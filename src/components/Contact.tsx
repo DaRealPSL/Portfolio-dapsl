@@ -4,6 +4,7 @@ import { useInView } from "react-intersection-observer";
 import validator from "validator";
 
 import "../styles/main.css";
+// import handler from "../../api/send-email.cjs"
 
 const containsOffensiveTerms = (input: string, offensiveList: string[]) => {
   return offensiveList.some((term) => input.toLowerCase().includes(term));
