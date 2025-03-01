@@ -99,11 +99,11 @@ const Contact: React.FC = () => {
     //setStatus to indicate waiting for the server
     setStatus({ message: "Waiting for server response...", success: false });
 
-    emailjs
-      .send(
+    emailjs.
+      sendForm(
         import.meta.env.VITE_EMAILJS_SERVICE_ID,
         import.meta.env.VITE_EMAILJS_TEMPLATE_ID,
-        formData,
+        e.target,
         import.meta.env.VITE_EMAILJS_USER_ID
       )
       .then((response) => {
