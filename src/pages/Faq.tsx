@@ -23,7 +23,7 @@ const Faq: React.FC = () => {
 
       <h2 className="faq-heading">Can I use your projects?</h2>
       <p className="faq-text">
-        Almost all of my projects may be open-source. Check their respective repositories for licensing details.
+        Almost all of my projects are open-source. Check their respective repositories for licensing details.
       </p>
 
       <h2 className="faq-heading">Will there be updates to this website?</h2>
