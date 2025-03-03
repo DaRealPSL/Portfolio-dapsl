@@ -12,11 +12,11 @@ const Intro: React.FC = () => {
     }
   };
   const handleWwynmClick = () => {
-		const wwynmSection = document.getElementById("wwynm");
-		if (wwynmSection) {
-			wwynmSection.scrollIntoView({ behavior: "smooth" });
-		}
-	};
+    const wwynmSection = document.getElementById("wwynm");
+    if (wwynmSection) {
+      wwynmSection.scrollIntoView({ behavior: "smooth" });
+    }
+  };
 
   return (
     <motion.section
@@ -68,18 +68,18 @@ const Intro: React.FC = () => {
             Explore My Work
           </motion.button>
           <motion.button
-				className="wwynm-btn"
-				style={{ backgroundColor: "#6a0dad", border: "none" }}
-				whileHover={{
-					scale: 1.1,
-					backgroundColor: "#8832cc",
-				}}
-				whileTap={{ scale: 0.95 }}
-				transition={{ duration: 0.2 }}
-				onClick={handleWwynmClick}
-			>
-
-			</motion.button>
+            className="wwynm-btn"
+            style={{ backgroundColor: "#6a0dad", border: "none" }}
+            whileHover={{
+              scale: 1.1,
+              backgroundColor: "#8832cc",
+            }}
+            whileTap={{ scale: 0.95 }}
+            transition={{ duration: 0.2 }}
+            onClick={handleWwynmClick}
+          >
+            Why Would You Need Me?
+          </motion.button>
         </div>
       </div>
     </motion.section>
