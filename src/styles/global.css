@@ -10,17 +10,58 @@
 :root {
   --background-color: #0d0d0d;
   --primary-color: #6a0dad;
+  
+  /* Grey Shades */
   --grey-900: #111827;
   --grey-800: #1f2937;
   --grey-700: #374151;
+  --grey-600: #4b5563;
+  --grey-500: #6b7280;
+  --grey-400: #9ca3af;
+  --grey-300: #d1d5db;
+  --grey-200: #e5e7eb;
+  --grey-100: #f3f4f6;
+
+  /* Purple Shades */
   --purple-900: #4c1d95;
   --purple-800: #5b21b6;
   --purple-700: #6d28d9;
+  --purple-600: #7e22ce;
+  --purple-500: #8b5cf6;
+  --purple-400: #a855f7;
+  --purple-300: #c084fc;
+  --purple-200: #d8b4fe;
+  --purple-100: #ede9fe;
+
+  /* Blue Shades */
   --blue-900: #1e3a8a;
+  --blue-800: #1e40af;
+  --blue-700: #1d4ed8;
+  --blue-600: #2563eb;
+  --blue-500: #3b82f6;
+  --blue-400: #60a5fa;
+  --blue-300: #93c5fd;
+  --blue-200: #bfdbfe;
+  --blue-100: #dbeafe;
+
+  /* Pink & Magenta Shades */
+  --pink-900: #9b30ff;
+  --pink-800: #8a2be2;
+  --pink-700: #9400d3;
+  --pink-600: #c71585;
+  --pink-500: #ff1493;
+  --pink-400: #ff69b4;
+  --pink-300: #ff00ff;
+  --pink-200: #ff80ff;
+  --pink-100: #ffb3ff;
+
+  /* Other Colors */
   --text-color: #ffffff;
   --secondary-text-color: #b3b3b3;
   --accent-color: #ff69b4;
   --img-bg-color: #ffffff;
+
+  /* Fonts */
   --font-fam-main: "Poppins", sans-serif;
   --font-fam-sec: "Roboto", sans-serif;
 }
