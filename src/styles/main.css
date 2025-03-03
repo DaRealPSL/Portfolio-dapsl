@@ -409,7 +409,7 @@ main {
   transition: background-color 0.2s ease;
 }
 
-.wwynm-btn:hover{
+.wwynm-btn:hover {
   background-color: var(--accent-color);
 }
 
@@ -694,7 +694,8 @@ main {
 }
 
 .terms-title,
-.privacy-title .faq-title {
+.privacy-title,
+.faq-title {
   font-size: 2.5rem;
   color: var(--primary-color);
   text-align: center;
@@ -727,7 +728,8 @@ main {
 }
 
 .terms-link:hover,
-.privacy-link:hover .faq-link:hover {
+.privacy-link:hover 
+.faq-link:hover {
   text-decoration: underline;
 }
 
@@ -792,7 +794,11 @@ textarea {
   position: fixed;
   pointer-events: none;
   z-index: 9999;
-  background: radial-gradient(circle, var(--primary-color) 40%, var(--accent-color));
+  background: radial-gradient(
+    circle,
+    var(--primary-color) 40%,
+    var(--accent-color)
+  );
   box-shadow: 0 0 15px rgba(255, 105, 180, 0.6);
   mix-blend-mode: difference;
   opacity: 0.9;
@@ -805,7 +811,8 @@ textarea {
 .custom-cursor.click {
   transform: scale(1.3);
   box-shadow: 0 0 25px rgba(255, 105, 180, 0.8);
-  transition: transform 0.1s ease-out, box-shadow 0.2s ease-out, opacity 0.2s ease-out;
+  transition: transform 0.1s ease-out, box-shadow 0.2s ease-out,
+    opacity 0.2s ease-out;
 }
 
 /* Hold Effect */
@@ -833,7 +840,11 @@ textarea {
 
 /* Default Cursor */
 .custom-cursor.default {
-  background: radial-gradient(circle, var(--primary-color) 40%, var(--accent-color));
+  background: radial-gradient(
+    circle,
+    var(--primary-color) 40%,
+    var(--accent-color)
+  );
 }
 
 /* Hover Effects for Specific Elements */
