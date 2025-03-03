@@ -41,7 +41,7 @@ const WWYNM = () => {
           <p>
             From programming languages like JavaScript and Python to frameworks like
             React and Node.js, I have hands-on experience across a range of technologies.
-            No project is too big or small for me!
+            No project is too big or too small for me!
           </p>
         </div>
         <div className="wwynm-item">
