@@ -89,6 +89,28 @@ const Projects = () => {
             !
           </p>
         </div>
+        <div className="project-item">
+          <h3>Data Structures in C++</h3>
+          <p>
+            A set of basic data structures I wrote from scratch, including a
+            Stack, Queue, and Linked List.
+          </p>
+          <p>
+            They throw exceptions. They're type-safe. They're also kinda
+            overengineered.
+          </p>
+          <p className="project-link">
+            Check it out{" "}
+            <a
+              href="https://github.com/IAmThePSL/DataStructuresLibrary/"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              here
+            </a>
+            !
+          </p>
+        </div>
       </div>
     </motion.section>
   );
