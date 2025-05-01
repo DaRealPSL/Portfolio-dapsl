@@ -1,18 +1,18 @@
 import emailjs from '@emailjs/nodejs';
 
-export default async function handler(req, res) {
-  if (req.method !== 'POST') {
-    return res.status(405).json({ success: false, message: 'Only POST requests are allowed' });
-  }
-
-  const { name, email, message } = req.body;
-
-  if (!name || !email || !message) {
-    return res.status(400).json({ success: false, message: 'Missing required fields' });
-  }
-
+export async function POST(req) {
   try {
-    const response = await emailjs.send(
+    const body = await req.json();
+    const { name, email, message } = body;
+
+    if (!name || !email || !message) {
+      return new Response(JSON.stringify({ success: false, message: 'Missing fields' }), {
+        status: 400,
+        headers: { 'Content-Type': 'application/json' }
+      });
+    }
+
+    const result = await emailjs.send(
       process.env.EMAILJS_SERVICE_ID,
       process.env.EMAILJS_TEMPLATE_ID,
       {
@@ -26,10 +26,15 @@ export default async function handler(req, res) {
       }
     );
 
-    console.log("EmailJS response:", response.status);
-    return res.status(200).json({ success: true, message: 'Email sent successfully!' });
-  } catch (error) {
-    console.error("EmailJS error:", error);
-    return res.status(500).json({ success: false, message: 'Failed to send email' });
+    return new Response(JSON.stringify({ success: true, result }), {
+      status: 200,
+      headers: { 'Content-Type': 'application/json' }
+    });
+  } catch (err) {
+    console.error("EmailJS Error:", err.message);
+    return new Response(JSON.stringify({ success: false, message: err.message }), {
+      status: 500,
+      headers: { 'Content-Type': 'application/json' }
+    });
   }
 }
