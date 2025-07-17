@@ -5,6 +5,9 @@
   "type": "module",
   "description": "A sleek, modern portfolio showcasing my projects, skills, and experience. Built with React, TypeScript, and Vite for a fast and responsive experience.",
   "main": "index.tsx",
+  "engines": {
+    "node": "22.x"
+  },
   "scripts": {
     "dev": "vite",
     "preview": "vite preview",
@@ -46,14 +49,14 @@
   },
   "devDependencies": {
     "@eslint/js": "^9.17.0",
-    "@types-node": "^22.10.10",
-    "@types-node-fetch": "^2.6.12",
-    "@types-react": "^18.3.18",
-    "@types-react-dom": "^18.3.5",
-    "@types-react-google-recaptcha": "^2.1.9",
-    "@types-react-scroll": "^1.8.10",
-    "@types-react-slick": "^0.23.13",
-    "@types-validator": "^13.12.2",
+    "@types/node": "^22.10.10",
+    "@types/node-fetch": "^2.6.12",
+    "@types/react": "^18.3.18",
+    "@types/react-dom": "^18.3.5",
+    "@types/react-google-recaptcha": "^2.1.9",
+    "@types/react-scroll": "^1.8.10",
+    "@types/react-slick": "^0.23.13",
+    "@types/validator": "^13.12.2",
     "@vitejs/plugin-react": "^4.3.4",
     "autoprefixer": "^10.4.20",
     "eslint": "^9.17.0",
